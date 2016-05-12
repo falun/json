@@ -63,7 +63,7 @@ err := json.UnmarshalX(data, &dest, json.Options{
 Now when decoding a JSON struct will fail if the required keys are not sent
 or, in the updated example, are sent as `null`.
 
-Given the limitations of only checking key validity on the first layer of
+Given the constraint of only checking key validity on the first layer of
 JSON there are obvious limitations but even this is somewhat useful.
 
 ## What needs love
