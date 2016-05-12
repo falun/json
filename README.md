@@ -49,7 +49,7 @@ struct decoding:
 err := json.UnmarshalX(data, &dest, json.Options{Required: []string{"username"}})
 ```
 
-Will decode a paylooad and produce an error if `username` was not explicitly set.
+Will decode a payload and produce an error if `username` was not explicitly set.
 And if you decide that `null` isn't sufficient and that the empty string must be
 passed you could change your unmarshal call to:
 
@@ -62,6 +62,9 @@ err := json.UnmarshalX(data, &dest, json.Options{
 
 Now when decoding a JSON struct will fail if the required keys are not sent
 or, in the updated example, are sent as `null`.
+
+Given the limitations of only checking key validity on the first layer of
+JSON there are obvious limitations but even this is somewhat useful.
 
 ## What needs love
 
