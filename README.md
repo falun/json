@@ -15,7 +15,7 @@ that I have an API which takes a JSON encoded payload and it absolutely must hav
 some string value set:
 
 ```go
-type PostSerachFilter struct {
+type PostSearchFilter struct {
   // Username specifies the user whose content we're searching; an empty string
   // searches all users
   Username string `json:"username"`
